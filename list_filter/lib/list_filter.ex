@@ -4,8 +4,6 @@ defmodule ListFilter do
     |> Enum.map(fn x -> _string_to_numeric(x) end)
     |> Enum.filter(fn x -> Integer.mod(x, 2) == 1 end)
     |> Enum.count()
-
-    # |> Enum.count(fn x -> end)
   end
 
   defp _string_to_numeric(val) when is_binary(val),
